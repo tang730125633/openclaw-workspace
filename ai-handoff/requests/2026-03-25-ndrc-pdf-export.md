@@ -61,3 +61,9 @@
 3. 优先尝试 Playwright/Chromium 原生 PDF 导出（page.pdf()）
 4. 如果必须点击打印按钮，探索 CDP 拦截打印请求的方案
 5. 最终回传可复用的脚本或配置变更
+
+## 处理状态
+- 状态: ANSWERED
+- 解决文件: `ai-handoff/solutions/2026-03-25-ndrc-pdf-export-solution.md`
+- 可执行脚本: `ai-handoff/solutions/scripts/export_page_pdf.cjs`
+- 核心结论: 该页面无附件 PDF，正确路径是复用打印态样式后直接调用浏览器 `page.pdf()`，而不是和系统打印框交互
